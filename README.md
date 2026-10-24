@@ -11,3 +11,15 @@ Install URL:
 ```
 https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg
 ```
+
+## Support
+
+Report problems at https://github.com/EllipticSet/unraid-header-fix/issues.
+
+## Rollback
+
+Remove the plugin from the Plugins page. To go back to the original plugin, install `https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg` (no longer maintained, and it does nothing on Unraid 7.4).
+
+## License
+
+GPL-3.0, like the original project by dkaser.
