@@ -1,8 +1,8 @@
 {
     "name": "header-fix",
     "package_name": "unraid-header-fix",
-    "author": "Derek Kaser",
-    "support": "https://forums.unraid.net/topic/196339-plugin-header-link-fix/",
+    "author": "EllipticSet",
+    "support": "https://github.com/EllipticSet/unraid-header-fix/issues",
     "icon": "fa-wrench",
     "min": "7.1.0"
 }
