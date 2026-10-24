@@ -3,11 +3,11 @@
 
 <PLUGIN 
   name="header-fix"
-  author="Derek Kaser"
+  author="EllipticSet"
   version="2026.10.18.0000"
   
-  pluginURL="https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg"
-  support="https://forums.unraid.net/topic/196339-plugin-header-link-fix/"
+  pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg"
+  support="https://github.com/EllipticSet/unraid-header-fix/issues"
   min="7.1.0"
   
   icon="fa-wrench"

@@ -3,35 +3,46 @@ Link="nav-user"
 ---
 <script>
 (function () {
-  const replaceLink = () => {
-    const header = document.querySelector('unraid-header-os-version');
-    if (!header) return false;
+  // Legacy header (Unraid <= 7.3), unified header logo (7.4+),
+  // and the boot placeholder shown by Header.php before <unraid-header> mounts.
+  const SELECTORS = [
+    'unraid-header-os-version a[href]',
+    'unraid-header a.uh-logo',
+    '.unraid-header-boot-logo a'
+  ].join(', ');
 
-    const link = header.querySelector('a[href]');
-    if (!link) return false;
-
-    try {
-      const url = new URL(link.href);
-      if (url.hostname === 'unraid.net') {
-        link.href = '/';
-        link.removeAttribute('target'); // optional
-      }
-    } catch (_) {}
-
-    return true;
+  const replaceLinks = () => {
+    document.querySelectorAll(SELECTORS).forEach((link) => {
+      try {
+        const url = new URL(link.href);
+        if (url.hostname === 'unraid.net' || url.hostname === 'www.unraid.net') {
+          link.href = '/';
+          link.removeAttribute('target');
+          link.removeAttribute('rel');
+        }
+      } catch (_) {}
+    });
   };
 
-  // Try immediately
-  if (replaceLink()) return;
+  replaceLinks();
 
-  // Observe DOM until Vue mounts it
+  // Keep observing: on 7.4 the boot placeholder is replaced by the Vue
+  // component, and the header can re-render after mount.
+  let scheduled = false;
   const observer = new MutationObserver(() => {
-    if (replaceLink()) observer.disconnect();
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      replaceLinks();
+    });
   });
 
   observer.observe(document.documentElement, {
     childList: true,
-    subtree: true
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['href']
   });
 })();
 </script>
