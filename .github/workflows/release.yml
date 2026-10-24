@@ -1,7 +1,8 @@
+name: Release
+
 on:
   release:
     types:
-      - prereleased
       - released
 
 jobs:
@@ -10,6 +11,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: dkaser/unraid-plugin-release-action@v1
+      - uses: dkaser/unraid-plugin-release-action@946d02c81dd87c252e5a06d18f3e74b2ecc401dc # v1.5.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
