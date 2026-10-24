@@ -3,24 +3,32 @@ Link="nav-user"
 ---
 <script>
 (function () {
-  // Legacy header (Unraid <= 7.3), unified header logo (7.4+),
-  // and the boot placeholder shown by Header.php before <unraid-header> mounts.
+  // Legacy header (Unraid <= 7.3), unified header logo block (7.4+; the
+  // a.uh-logo class only exists in newer API builds), and the boot
+  // placeholder shown by Header.php before <unraid-header> mounts.
   const SELECTORS = [
     'unraid-header-os-version a[href]',
+    'unraid-header .uh-logo-block a[href]',
     'unraid-header a.uh-logo',
     '.unraid-header-boot-logo a'
   ].join(', ');
 
+  const isLogoLink = (link) => {
+    try {
+      const url = new URL(link.href);
+      return (url.hostname === 'unraid.net' || url.hostname === 'www.unraid.net') &&
+        url.pathname === '/' && !url.search && !url.hash;
+    } catch (_) {
+      return false;
+    }
+  };
+
   const replaceLinks = () => {
     document.querySelectorAll(SELECTORS).forEach((link) => {
-      try {
-        const url = new URL(link.href);
-        if (url.hostname === 'unraid.net' || url.hostname === 'www.unraid.net') {
-          link.href = '/';
-          link.removeAttribute('target');
-          link.removeAttribute('rel');
-        }
-      } catch (_) {}
+      if (!isLogoLink(link)) return;
+      link.href = '/';
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
     });
   };
 
