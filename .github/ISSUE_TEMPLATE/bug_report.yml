@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a problem with the plugin.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the README and existing issues first. For vulnerabilities, use the private reporting channel linked in SECURITY.md.
+        Remove credentials and other private information from screenshots.
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Plugin version
+      description: Shown in Plugins.
+      placeholder: "2026.10.25.1800"
+    validations:
+      required: true
+  - type: input
+    id: unraid_version
+    attributes:
+      label: Unraid version
+      placeholder: "7.4.0"
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "Safari on iOS 26"
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Describe what you expected when selecting the logo and what happened, for example the page that opened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include whether this happens right after the page loads, after an update or only with a specific theme.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Include the theme, other plugins that change the header and, if possible, the output of this command in the browser console - document.querySelector('unraid-header .uh-logo-block a, unraid-header-os-version a')?.outerHTML
+      render: text

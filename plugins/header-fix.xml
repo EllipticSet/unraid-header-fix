@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plugin>
+  <Name>WebGUI Header Link Fix</Name>
+  <Overview>Makes the Unraid logo in the WebGUI header open the WebGUI start page in the same tab, instead of unraid.net in a new tab. Works with the header of Unraid 7.1 to 7.3 and with the new header introduced in Unraid 7.4. Continuation of the original plugin by Derek Kaser.</Overview>
+  <PluginURL>https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg</PluginURL>
+  <PluginAuthor>EllipticSet</PluginAuthor>
+  <Support>https://github.com/EllipticSet/unraid-header-fix/issues</Support>
+  <Project>https://github.com/EllipticSet/unraid-header-fix</Project>
+  <ReadMe>https://github.com/EllipticSet/unraid-header-fix/blob/main/README.md</ReadMe>
+  <Category>Tools:</Category>
+  <Beta>false</Beta>
+  <MinVer>7.1.0</MinVer>
+  <IconFA>wrench</IconFA>
+  <License>GPL-3.0</License>
+</Plugin>
