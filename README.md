@@ -15,7 +15,7 @@
 
 </div>
 
-In the Unraid WebGUI, the logo in the header opens unraid.net in a new tab. This plugin changes it to open the WebGUI start page in the same tab, the page selected in **Settings → Display Settings**.
+In the Unraid WebGUI, the logo in the header opens unraid.net in a new tab. This plugin changes it to open the WebGUI start page in the same tab, the page selected in **Settings → Management Access → Start Page**.
 
 The plugin has no settings, runs no background service and makes no network requests. It adds a small script to the WebGUI page that changes only the logo link.
 
