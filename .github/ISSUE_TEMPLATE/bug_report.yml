@@ -10,8 +10,8 @@ body:
     id: plugin_version
     attributes:
       label: Plugin version
-      description: Shown in Plugins.
-      placeholder: "2026.10.25.1800"
+      description: Shown in Plugins, for example 2026.10.25.1800.
+      placeholder: "YYYY.MM.DD.HHMM"
     validations:
       required: true
   - type: input

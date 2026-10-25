@@ -1,8 +1,8 @@
 name: Validate plugin
 on:
   push:
-    branches-ignore:
-      - "release-build/**"
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 permissions:
