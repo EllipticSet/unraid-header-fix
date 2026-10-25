@@ -1,12 +1,12 @@
                  |-----handy-ruler------------------------------------------------------|
-unraid-header-fix: unraid-header-fix
+unraid-header-fix: unraid-header-fix (WebGUI Header Link Fix)
 unraid-header-fix:
-unraid-header-fix: Replaces the unraid.net link in the WebGUI header with a link back to
-unraid-header-fix: the WebGUI start page.
+unraid-header-fix: Makes the Unraid logo in the WebGUI header open the WebGUI start
+unraid-header-fix: page instead of unraid.net. Supports the Unraid 7.1 to 7.3 header
+unraid-header-fix: and the new header in Unraid 7.4.
 unraid-header-fix:
+unraid-header-fix: Maintained by EllipticSet, based on the plugin by Derek Kaser.
 unraid-header-fix:
+unraid-header-fix: Homepage: https://github.com/EllipticSet/unraid-header-fix
 unraid-header-fix:
-unraid-header-fix:
-unraid-header-fix:
-unraid-header-fix: Repository: https://github.com/EllipticSet/unraid-header-fix
 unraid-header-fix:

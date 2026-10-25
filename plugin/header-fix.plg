@@ -1,76 +1,75 @@
-<?xml version='1.0' standalone='yes'?>
-<!DOCTYPE PLUGIN>
+<?xml version='1.0' encoding='utf-8'?>
+<PLUGIN name="header-fix" author="EllipticSet" version="2026.10.25.1800" pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg" support="https://github.com/EllipticSet/unraid-header-fix/issues" min="7.1.0" icon="fa-wrench">
+  <CHANGES>
+###2026.10.25.1800
+- The plugin file now contains the package, so installation and updates no longer download it from GitHub.
+- Add Community Applications metadata for the EllipticSet fork.
 
-<PLUGIN 
-  name="header-fix"
-  author="EllipticSet"
-  version="2026.10.24.1600"
-  
-  pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg"
-  support="https://github.com/EllipticSet/unraid-header-fix/issues"
-  min="7.1.0"
-  
-  icon="fa-wrench"
->
+###2026.10.24.1600
+- Fix the logo link on Unraid 7.4.0-rc.2, whose header does not use the uh-logo class.
+- Rewrite only the unraid.net home link in the header logo; other unraid.net links are left unchanged.
 
-<CHANGES>
-<![CDATA[
+###2026.10.24.0000
+- Support the unified Unraid 7.4 header, including the placeholder shown before it loads.
+- The plugin is now maintained at https://github.com/EllipticSet/unraid-header-fix.
 
-### 2026.10.24.1600
+###2026.10.18.0000
+- End of support for the original plugin by Derek Kaser.
 
-## What's Changed
-* Fix the logo link on Unraid 7.4.0-rc.2, whose header does not use the uh-logo class
-* Only the unraid.net home link in the header logo is rewritten; other unraid.net links are left unchanged
+###2026.03.19.2240
+- Fix the name format on the Plugins page.
 
-### 2026.10.24.0000
-
-## What's Changed
-* Support the unified Unraid 7.4 header (logo and boot placeholder)
-* Plugin maintained at EllipticSet/unraid-header-fix
-
-
-For older releases, see https://github.com/EllipticSet/unraid-header-fix/releases
-]]>
+###2026.01.07.02
+- Add a link to the support thread.
 </CHANGES>
-
-<FILE Name="/boot/config/plugins/header-fix/unraid-header-fix-2026.10.24.1600-noarch-1.txz">
-<URL>https://github.com/EllipticSet/unraid-header-fix/releases/download/2026.10.24.1600/unraid-header-fix-2026.10.24.1600-noarch-1.txz</URL>
-<SHA256>73bd9483cce184930ecf7481adc7c60ea2f3b1eb3b0f5672e2696f10a8c0fb9f</SHA256>
-</FILE>
-
-<!--
-The 'install' script.
--->
-<FILE Run="/bin/bash">
-<INLINE>
-<![CDATA[
-upgradepkg --install-new /boot/config/plugins/header-fix/unraid-header-fix-2026.10.24.1600-noarch-1.txz
-
-# cleanup old versions
-rm -f $(ls /boot/config/plugins/header-fix/unraid-header-fix-*.txz 2>/dev/null | grep -v '2026.10.24.1600')
-
+  <FILE Run="/bin/bash">
+    <INLINE>set -euo pipefail
+scratch=$(mktemp -d /tmp/header-fix-install.XXXXXX)
+trap 'rm -rf -- "$scratch"' EXIT
+base64 -d &gt; "$scratch/unraid-header-fix-2026.10.25.1800-noarch-1.txz" &lt;&lt;'HEADER_FIX_PAYLOAD'
+/Td6WFoAAATm1rRGAgAhARYAAAB0L+Wj4Cf/BKRdADSbis4fvAUP9onbyKO5hKWNo4KTEEyxFFQd
+N3riB/Nfyb7hzvmf9HjgcWymase56HhoLJghbSzbCIaa0dPwCvrenRCfvrrpPcx7cfmLCP19GCEC
+jWqHgYExJ0ieucIJ8Tn2tU3svi3pDwr3ZSaqAcPlx6l/uZI9TyZL2uxsos+bn9C/bVA153tDa8n0
+G68QlGDZqOaMPIdkBwr1IKV7ihOQ8m/GLB3x+62BpC9NYcq/EVp/bcw0k8kRMyUAhWuGmpOsJY23
+GKqV9fIStw26LrpuYr/UK9klvsd6jd0qBxUwKaCK3FgVTX5oMQGt+L2CwVJdovZEZljvCSXSmxRK
++F5JkdjrCtdBMWHqSXcrDCuIdlAnV+2tvOM3cCbZqTMzmXxb+rVni3nekmG3sZdnYPCTh/bz/JSm
+J23IV5bHJ9Z/K4AsuprJ7O4JSZ94X9iZZvI5YyrT8Aqvtlb8gdJKnUkMLwDFadK3cWrUyCqAfXST
+xN056odi0SUNSV8CqR1cTztiL4nkJoP6Jmcy3orb0gYQwBCBD7aD9jAQMK6FX3Grc0LbKV8KTS/4
+Ftyhy64z/LfPqtWG9otzl4Xzhw90iZLp/GyAOiqyn9qhVUK87zySIWEjPqKKJbBA6pz1vecwbOF2
+OJR5p/2xzmDIeik2yQGgeXl0NCpEU8OIJVhLLvdp7lHHYDn0/0r6PJPUIwUUgDdiETbjOQmDMxVT
+i8YgnTDoe7ZznglKzT/jZ8qZmw8KmrPxIGsMxFGvRutXrNoF0Z8S2J1KN5tjHGk8IxFpfG5/uCXf
+/f39zzFGww4zQG5PFimO9EGoZBm/+Pp/oO9lZ6nFs5WZOVEqR5GyRYGY5qzt288bpJ7XD+vtb5Wo
+cxy0rPtA0VRnh8DMc+z2fU19uV4PG7vEC436t8lO6atcIDhWqJMapjoTN9rGknZmSYOEJSmVX2Bt
+DepbVa9ubJONykeSrcasZOO8qjmvzQ3rDiwevnx32e8YP3EIwdvEZ+whCE4jhvJHMWAgCLPZocuh
+oXpHBb9FCDU0mrYjzBCCt4JBltz5XFo6h/SP+C/wQswecilzaq1ygkc0134zSLnGX+xACum1ztbc
+0fthenRAPOtDNxL8pzCcAKzP2GgIvIczZB4wm+/VBZP+l/KA3Td/yHhVGDiXOISPKWns9pgKDtl3
+oZPKIJb9n5t0jjOY5k/IMmEQOxU8nKjSlH6M//slh2GCIwnJGzh97JGrfOaR/doKZw0Hw/vUIGMj
+71bm6GjpZYVscmz/QmBp1B2kdM7vR8ZGDXrHWUL7wGiIJWbFNL+CRr9YSebLb4Mj9pDXIpiUk7aT
+iQn+qEBEWnCWbCjmWfQ0dZK20gZyeqDkWardVKWE7mZQens6B8RxM0XJoOlXZ2lk/m8OGO5B7jIl
+9OVFd8jI5zgeI/tyMG2cnZsmXoWDbhB7sfon7XPjyaiQN99mf1+ZyYoZZ8dOo9B4XwZs1f6lvFfb
++CDGHUnf2zrtYCoqbgBV4X+ttFIcCNbYqVSa797ithOyGnxtdZot7jYVpa6KX0vKLaA4yfJzFnjh
+of9fBojJd9LMH9U4SaK49bZbHIQQAABNe3H0m02U6wABwAmAUAAAkzBIXrHEZ/sCAAAAAARZWg==
+HEADER_FIX_PAYLOAD
+if ! printf '%s  %s\n' "3aa0dd8021d9c3fe69f7ec2f4328b4afa867937f7ec28165e64d4576968433d5" "$scratch/unraid-header-fix-2026.10.25.1800-noarch-1.txz" | sha256sum -c --status -; then
+  echo 'Package checksum mismatch; the plugin file is incomplete or modified.' &gt;&amp;2
+  exit 1
+fi
+upgradepkg --install-new --reinstall "$scratch/unraid-header-fix-2026.10.25.1800-noarch-1.txz"
+# Releases before 2026.10.25.1800 downloaded the package to the boot device.
+rm -f /boot/config/plugins/header-fix/unraid-header-fix-*.txz
 echo ""
 echo "----------------------------------------------------"
-echo " header-fix has been installed."
-echo " Version: 2026.10.24.1600"
+echo " WebGUI Header Link Fix has been installed."
+echo " Version: 2026.10.25.1800"
 echo "----------------------------------------------------"
 echo ""
-]]>
 </INLINE>
-</FILE>
-
-<!--
-The 'remove' script.
--->
-<FILE Run="/bin/bash" Method="remove">
-<INLINE>
-<![CDATA[
-removepkg unraid-header-fix
-
+  </FILE>
+  <FILE Run="/bin/bash" Method="remove">
+    <INLINE>removepkg unraid-header-fix || true
 rm -rf /usr/local/emhttp/plugins/header-fix
 rm -rf /boot/config/plugins/header-fix
-]]>
+echo "WebGUI Header Link Fix has been removed."
 </INLINE>
-</FILE>
-
+  </FILE>
 </PLUGIN>

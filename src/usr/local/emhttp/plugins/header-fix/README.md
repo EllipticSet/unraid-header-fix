@@ -1,3 +1,3 @@
-**Fix Header Link**
+**WebGUI Header Link Fix**
 
-Replaces the unraid.net link in the WebGUI header with a link back to the WebGUI start page.
+Makes the Unraid logo in the WebGUI header open the WebGUI start page instead of unraid.net. Maintained by EllipticSet.
