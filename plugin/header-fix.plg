@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<PLUGIN name="header-fix" author="EllipticSet" version="2026.10.25.1800" pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg" support="https://github.com/EllipticSet/unraid-header-fix/issues" min="7.1.0" icon="fa-wrench">
+<PLUGIN name="header-fix" author="EllipticSet" version="2026.10.26.1900" pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg" support="https://github.com/EllipticSet/unraid-header-fix/issues" min="7.1.0" icon="header-fix.png">
   <CHANGES>
+###2026.10.26.1900
+- Show the plugin icon from the repository on the Plugins page and in Community Applications, instead of the generic wrench.
+
 ###2026.10.25.1800
 - The plugin file now contains the package, so installation and updates no longer download it from GitHub.
 - Add Community Applications metadata for the EllipticSet fork.
@@ -26,8 +29,8 @@
     <INLINE>set -euo pipefail
 scratch=$(mktemp -d /tmp/header-fix-install.XXXXXX)
 trap 'rm -rf -- "$scratch"' EXIT
-base64 -d &gt; "$scratch/unraid-header-fix-2026.10.25.1800-noarch-1.txz" &lt;&lt;'HEADER_FIX_PAYLOAD'
-/Td6WFoAAATm1rRGAgAhARYAAAB0L+Wj4Cf/BKRdADSbis4fvAUP9onbyKO5hKWNo4KTEEyxFFQd
+base64 -d &gt; "$scratch/unraid-header-fix-2026.10.26.1900-noarch-1.txz" &lt;&lt;'HEADER_FIX_PAYLOAD'
+/Td6WFoAAATm1rRGAgAhARYAAAB0L+Wj4E//CBZdADSbis4fvAUP9onbyKO5hKWNo4KTEEyxFFQd
 N3riB/Nfyb7hzvmf9HjgcWymase56HhoLJghbSzbCIaa0dPwCvrenRCfvrrpPcx7cfmLCP19GCEC
 jWqHgYExJ0ieucIJ8Tn2tU3svi3pDwr3ZSaqAcPlx6l/uZI9TyZL2uxsos+bn9C/bVA153tDa8n0
 G68QlGDZqOaMPIdkBwr1IKV7ihOQ8m/GLB3x+62BpC9NYcq/EVp/bcw0k8kRMyUAhWuGmpOsJY23
@@ -47,20 +50,36 @@ oZPKIJb9n5t0jjOY5k/IMmEQOxU8nKjSlH6M//slh2GCIwnJGzh97JGrfOaR/doKZw0Hw/vUIGMj
 71bm6GjpZYVscmz/QmBp1B2kdM7vR8ZGDXrHWUL7wGiIJWbFNL+CRr9YSebLb4Mj9pDXIpiUk7aT
 iQn+qEBEWnCWbCjmWfQ0dZK20gZyeqDkWardVKWE7mZQens6B8RxM0XJoOlXZ2lk/m8OGO5B7jIl
 9OVFd8jI5zgeI/tyMG2cnZsmXoWDbhB7sfon7XPjyaiQN99mf1+ZyYoZZ8dOo9B4XwZs1f6lvFfb
-+CDGHUnf2zrtYCoqbgBV4X+ttFIcCNbYqVSa797ithOyGnxtdZot7jYVpa6KX0vKLaA4yfJzFnjh
-of9fBojJd9LMH9U4SaK49bZbHIQQAABNe3H0m02U6wABwAmAUAAAkzBIXrHEZ/sCAAAAAARZWg==
++CDGHUnf2zrtYCoqbgBV4X+ttFIcCNbYqVSa797ithOyGnxtdZot7jYVpa6KX0vKLaA4w24Pb9gc
+ogPFPCp2QNv656pJ0u1vtVJP5NEaWd2QQ969OONhPsEqbRRfiVKsJrvbeCyXs7uScJmGaClOqLp+
+Iv98lMVpMPOToXmAa1JAY4sDUwJw1hDJPH1i678VYcha5PE9sGaKFQPal06wUUzVTSMY7XAXxNeR
+88pRXhK9BlOz34YyEcygUSL64A0aFI+wM8woiSk5+4vm0wlwXPHfZGpM/amSEM/sr/gYEErPiitS
+eBERBXTSPFCAXeIz7IAm5zfvRx/FdvCTe/TqL7WB2Jkmn+itHEZNSLPTMok0PikXAugRuLNhxTgP
+KdgdLX74/+l69/+KpyC+9ZLYkgBVr3xfx5qt4EYAlhcONoEiuzw4rI/lqJez5a1nHLxQEilFTpBm
+yhLx8r6EFwesqBKAiHS5mLbKOFIX6FnEJy8JvThhY9Y5gtfxcVicW4J6m2Q0dM6Stis+nDZvEOJ4
+2mKbjlKFX3wQtllH94RU2azA0TY+1AsPg2yamByJr4kZYrECvI2Kqz93M5AeYslZugYd6hW7j07s
+ERFubNu0BKBaEzYJqpHv2cH0Tf7ytRXS/uoEvHrdnXZmfQqLOaLeczBYggBMaac28RTDgi4cCXrN
+FY2igE8TunbhdWnFbNWYE8FTBHJKppWzHWx4R8GSVJa5+PRldie6Xiuukhw4tLAkVdZFwaYZTsYN
+7AUC14svZ3lUfrt9Q40f0yMw4uubSO05dZ9VcrISBrVt01Mpxl23UogYO8GqZs2cFJZmdaGuWBi3
+1yDXS/nDLH8eQM5j0h7wWioTkAAbs59QthFmJXneNXl1NTBFFmaTzTozO/DEs36H2SUgnqIuGi5x
+sftxrjXvaa17D2fq5XcoJFLSGkel+wjE4XZvJsP2jCHvUOkYUQg7XUk73B0Kmqj1GtBs7dciLX/p
+aFeA2meyCekoBvW8O06E6DO/VtZEzIhI2Yd0S0iJaaZr7PhT5mCb8XD/OnDBotfwCembF+oRbL/3
+B+u723k8S+emB+BhLv2qUguA0RWNfGl/PjBXhwIsTuCht7ZFVgKOkBZhUT63+TzjPKQedZL0HWiZ
+R7cjnD9pqLvbUTJrRt8cq97cLzLmGMdgwrOgUHvEWRSam7GjOCjsf/SW4pyxwcbwkSetR9bbdslk
+GKYCOBwbjDiUCl4gzWyEk8yT5Ql3yOQdtfzvhfxLlGpRYACqcUUG3h2uDoKwS+rFAAAAAHE06fWo
+AYlBAAGyEICgAQA7K43ZscRn+wIAAAAABFla
 HEADER_FIX_PAYLOAD
-if ! printf '%s  %s\n' "3aa0dd8021d9c3fe69f7ec2f4328b4afa867937f7ec28165e64d4576968433d5" "$scratch/unraid-header-fix-2026.10.25.1800-noarch-1.txz" | sha256sum -c --status -; then
+if ! printf '%s  %s\n' "2073d90e6883132b868c10bbc44909162681928a127d6363c52f382ac753d0d1" "$scratch/unraid-header-fix-2026.10.26.1900-noarch-1.txz" | sha256sum -c --status -; then
   echo 'Package checksum mismatch; the plugin file is incomplete or modified.' &gt;&amp;2
   exit 1
 fi
-upgradepkg --install-new --reinstall "$scratch/unraid-header-fix-2026.10.25.1800-noarch-1.txz"
-# Releases before 2026.10.25.1800 downloaded the package to the boot device.
+upgradepkg --install-new --reinstall "$scratch/unraid-header-fix-2026.10.26.1900-noarch-1.txz"
+# Releases before 2026.10.26.1900 downloaded the package to the boot device.
 rm -f /boot/config/plugins/header-fix/unraid-header-fix-*.txz
 echo ""
 echo "----------------------------------------------------"
 echo " WebGUI Header Link Fix has been installed."
-echo " Version: 2026.10.25.1800"
+echo " Version: 2026.10.26.1900"
 echo "----------------------------------------------------"
 echo ""
 </INLINE>

@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/head
 
 - [`ca_profile.xml`](../ca_profile.xml): repository profile.
 - [`plugins/header-fix.xml`](../plugins/header-fix.xml): plugin listing, installation URL, compatibility and icon.
-- [`icon.svg`](../icon.svg): repository icon used by the profile. The plugin listing uses the Font Awesome `wrench` icon, as on the Plugins page.
+- [`icon.svg`](../icon.svg): icon used by the profile and the plugin listing. The Plugins page in Unraid shows only PNG images, so the package installs `images/header-fix.png`, rendered from `icon.svg` at 96 × 96 pixels; regenerate it when the icon changes.
 - Support: [GitHub Issues](https://github.com/EllipticSet/unraid-header-fix/issues).
 
 When updating the listing, keep it aligned with the plugin: the `PluginURL` must match the `pluginURL` attribute of `plugin/header-fix.plg` exactly, and the minimum Unraid version must match its `min` attribute. Run `python3 tests/ca-metadata-test.py` after each change. This checks the repository files; availability in the catalogue must be checked in Community Applications.

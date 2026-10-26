@@ -10,6 +10,6 @@
   <Category>Tools:</Category>
   <Beta>false</Beta>
   <MinVer>7.1.0</MinVer>
-  <IconFA>wrench</IconFA>
+  <Icon>https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/icon.svg</Icon>
   <License>GPL-3.0</License>
 </Plugin>
