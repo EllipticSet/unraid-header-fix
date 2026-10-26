@@ -1,3 +1,6 @@
+###2026.10.26.1900
+- Show the plugin icon from the repository on the Plugins page and in Community Applications, instead of the generic wrench.
+
 ###2026.10.25.1800
 - The plugin file now contains the package, so installation and updates no longer download it from GitHub.
 - Add Community Applications metadata for the EllipticSet fork.

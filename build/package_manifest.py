@@ -3,14 +3,15 @@ NAME = 'header-fix'
 PACKAGE_NAME = 'unraid-header-fix'
 # Date-based versions (YYYY.MM.DD.HHMM) continue the original plugin's scheme,
 # so installations of earlier releases always see a newer version.
-VERSION = '2026.10.25.1800'
+VERSION = '2026.10.26.1900'
 PKG = f'{PACKAGE_NAME}-{VERSION}-noarch-1'
 AUTHOR = 'EllipticSet'
 REPOSITORY = 'https://github.com/EllipticSet/unraid-header-fix'
 # Kept at plugin/header-fix.plg so installations from earlier releases keep updating.
 PLUGIN_URL = 'https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg'
 SUPPORT_URL = 'https://github.com/EllipticSet/unraid-header-fix/issues'
-ICON = 'fa-wrench'
+# PNG rendered from icon.svg; the Plugins page shows only PNG images or font icons.
+ICON = 'header-fix.png'
 MIN_UNRAID = '7.1.0'
 
 

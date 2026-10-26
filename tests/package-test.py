@@ -26,6 +26,7 @@ assert f'rm -f /boot/config/plugins/{NAME}/{PACKAGE_NAME}-*.txz' in script
 assert f'removepkg {PACKAGE_NAME}' in remove.findtext('INLINE')
 expected = payload_inputs(root)
 assert 'install/slack-desc' in expected and f'usr/local/emhttp/plugins/{NAME}/HeaderFix.page' in expected
+assert f'usr/local/emhttp/plugins/{NAME}/images/{el.get("icon")}' in expected, 'Plugin icon is not packaged'
 with tarfile.open(fileobj=io.BytesIO(blob), mode='r:xz') as tf:
     files = [m.name for m in tf.getmembers() if m.isfile()]
     assert len(files) == len(set(files)), 'Duplicate payload entries'

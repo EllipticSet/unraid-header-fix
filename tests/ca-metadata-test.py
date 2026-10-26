@@ -12,9 +12,10 @@ assert entry.findtext('Support') == manifest.get('support')
 assert entry.findtext('Name') == 'WebGUI Header Link Fix'
 assert entry.findtext('MinVer') == manifest.get('min') == '7.1.0' and entry.find('MaxVer') is None
 assert entry.findtext('Beta') == 'false' and entry.find('Deprecated') is None
-assert entry.findtext('IconFA') == manifest.get('icon').removeprefix('fa-')
+assert entry.find('IconFA') is None and entry.findtext('Icon') == profile.findtext('Icon')
+assert manifest.get('icon') == 'header-fix.png'
 assert entry.findtext('License') == 'GPL-3.0' and 'GNU GENERAL PUBLIC LICENSE' in (r/'LICENSE').read_text()
-assert (r/'icon.svg').is_file() and profile.findtext('Icon').endswith('/main/icon.svg')
+assert (r/'icon.svg').is_file() and (r/'src/usr/local/emhttp/plugins/header-fix/images/header-fix.png').is_file() and profile.findtext('Icon').endswith('/main/icon.svg')
 for p in [r/'ca_profile.xml', r/'plugins/header-fix.xml']:
     text = p.read_text()
     assert 'YOUR_' not in text and '/master/' not in text, p.name
