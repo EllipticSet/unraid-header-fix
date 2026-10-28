@@ -16,11 +16,3 @@ https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/head
 - Support: [GitHub Issues](https://github.com/EllipticSet/unraid-header-fix/issues).
 
 When updating the listing, keep it aligned with the plugin: the `PluginURL` must match the `pluginURL` attribute of `plugin/header-fix.plg` exactly, and the minimum Unraid version must match its `min` attribute. Run `python3 tests/ca-metadata-test.py` after each change. This checks the repository files; availability in the catalogue must be checked in Community Applications.
-
-## Submission
-
-1. Sign in at [ca.unraid.net/submit](https://ca.unraid.net/submit/new) with an Unraid account.
-2. Enter `https://github.com/EllipticSet/unraid-header-fix`.
-3. Run **Validate** and **Scan**, fix any reported issues and submit. Plugin submissions are reviewed manually.
-
-Reference layout: [official Community Apps starter](https://github.com/unraid/unraid-community-apps-starter). Maintainer help: [Community Applications submission help](https://ca.unraid.net/submit/help).
