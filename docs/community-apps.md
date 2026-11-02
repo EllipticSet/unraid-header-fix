@@ -1,6 +1,6 @@
 # Community Applications
 
-The plugin is submitted to Community Applications as **WebGUI Header Link Fix**, to replace the original listing by Derek Kaser. Once this listing is approved, he agreed to redirect updates from the original plugin to this repository and to remove the original listing.
+The plugin is listed in Community Applications as **WebGUI Header Link Fix**. The listing was approved on 2 November 2026 and replaces the original one by Derek Kaser, who agreed to redirect updates from the original plugin to this repository and to remove the original listing.
 
 Direct installation remains available through **Plugins → Install Plugin** using:
 
