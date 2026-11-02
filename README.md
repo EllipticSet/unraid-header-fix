@@ -32,7 +32,7 @@ Only links that point exactly to the unraid.net home page are changed. Other unr
 
 ## Installation
 
-Once the plugin is available in Community Applications, open **Apps** in Unraid, search for **WebGUI Header Link Fix** and select **Install**.
+Open **Apps** in Unraid, search for **WebGUI Header Link Fix** and select **Install**.
 
 ### Direct installation
 
