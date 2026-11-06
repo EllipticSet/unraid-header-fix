@@ -17,7 +17,7 @@
 
 In the Unraid WebGUI, the logo in the header opens unraid.net in a new tab. This plugin changes it to open the WebGUI start page in the same tab, the page selected in **Settings → Management Access → Start Page**.
 
-The plugin has no settings, runs no background service and makes no network requests. It adds a small script to the WebGUI page that changes only the logo link. On phones with the 7.1 to 7.3 header, it also adds a style rule that keeps the server name box from covering the logo, so the logo can be tapped.
+The plugin has no settings, runs no background service and makes no network requests. It adds a small script to the WebGUI page that changes only the logo link. On phones with the 7.1 to 7.3 header, it also adds a style rule that keeps the server name box from covering the logo, so the logo can be tapped, and from being wider than the screen.
 
 > This project continues the [original plugin by Derek Kaser](https://github.com/dkaser/unraid-header-fix), which reached end of support in October 2026. It is maintained by EllipticSet and is not an official Unraid project.
 

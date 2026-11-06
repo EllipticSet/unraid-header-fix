@@ -4,9 +4,9 @@ const page = fs.readFileSync('src/usr/local/emhttp/plugins/header-fix/HeaderFix.
 assert.match(page, /^Menu="Buttons:299"\nLink="nav-user"\n---\n<script>\n/);
 const script = page.split('<script>\n')[1].split('</script>')[0];
 
-// The legacy header on phones: taps on the logo must pass through #UserProfile.
+// The legacy header on phones: taps on the logo pass through #UserProfile, which also fits the screen.
 const style = page.split('<style>\n')[1].split('</style>')[0].replace(/\/\*[\s\S]*?\*\//g, '');
-assert.match(style, /@media \(max-width: 767px\) \{\s*#header #UserProfile \{\s*pointer-events: none;\s*\}\s*#header #UserProfile > \* \{\s*pointer-events: auto;\s*\}\s*\}/);
+assert.match(style, /@media \(max-width: 767px\) \{\s*#header #UserProfile \{\s*min-width: 0;\s*pointer-events: none;\s*\}\s*#header #UserProfile > \* \{\s*pointer-events: auto;\s*\}\s*\}/);
 
 const link = href => ({
   href, attrs: { target: '_blank', rel: 'noopener' },
