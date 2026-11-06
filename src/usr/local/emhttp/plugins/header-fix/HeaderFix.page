@@ -54,3 +54,18 @@ Link="nav-user"
   });
 })();
 </script>
+<style>
+/* Legacy header (Unraid <= 7.3): below 768px, #UserProfile (server name,
+   bell, avatar) sits above the logo with a transparent left padding that
+   swallows taps. Let taps pass through the box; its content stays
+   clickable. The unified 7.4 header has no #UserProfile, so nothing changes. */
+@media (max-width: 767px) {
+  #header #UserProfile {
+    pointer-events: none;
+  }
+
+  #header #UserProfile > * {
+    pointer-events: auto;
+  }
+}
+</style>

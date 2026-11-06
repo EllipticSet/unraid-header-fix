@@ -1,3 +1,6 @@
+###2026.11.06.1700
+- Make the UNRAID logo tappable on phones with the Unraid 7.1 to 7.3 header, where the server name box covered it. Custom CSS is no longer needed for this.
+
 ###2026.10.26.1900
 - Show the plugin icon from the repository on the Plugins page and in Community Applications, instead of the generic wrench.
 
