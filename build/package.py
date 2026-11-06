@@ -53,7 +53,7 @@ if ! printf '%s  %s\\n' "{digest(package)}" "$scratch/{PKG}.txz" | sha256sum -c 
   exit 1
 fi
 upgradepkg --install-new --reinstall "$scratch/{PKG}.txz"
-# Releases before {VERSION} downloaded the package to the boot device.
+# Releases before 2026.10.25.1800 downloaded the package to the boot device.
 rm -f /boot/config/plugins/{NAME}/{PACKAGE_NAME}-*.txz
 echo ""
 echo "----------------------------------------------------"

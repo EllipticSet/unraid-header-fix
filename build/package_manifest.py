@@ -3,7 +3,7 @@ NAME = 'header-fix'
 PACKAGE_NAME = 'unraid-header-fix'
 # Date-based versions (YYYY.MM.DD.HHMM) continue the original plugin's scheme,
 # so installations of earlier releases always see a newer version.
-VERSION = '2026.11.06.1700'
+VERSION = '2026.11.06.1800'
 PKG = f'{PACKAGE_NAME}-{VERSION}-noarch-1'
 AUTHOR = 'EllipticSet'
 REPOSITORY = 'https://github.com/EllipticSet/unraid-header-fix'

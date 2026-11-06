@@ -1,3 +1,6 @@
+###2026.11.06.1800
+- Fit the header and pages to the screen on phones with the Unraid 7.1 to 7.3 header. The server name box was wider than the screen, so iOS Safari zoomed out and left an empty strip on the right.
+
 ###2026.11.06.1700
 - Make the UNRAID logo tappable on phones with the Unraid 7.1 to 7.3 header, where the server name box covered it. Custom CSS is no longer needed for this.
 
