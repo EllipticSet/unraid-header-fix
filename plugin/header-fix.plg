@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<PLUGIN name="header-fix" author="EllipticSet" version="2026.10.26.1900" pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg" support="https://github.com/EllipticSet/unraid-header-fix/issues" min="7.1.0" icon="header-fix.png">
+<PLUGIN name="header-fix" author="EllipticSet" version="2026.11.06.1700" pluginURL="https://raw.githubusercontent.com/EllipticSet/unraid-header-fix/main/plugin/header-fix.plg" support="https://github.com/EllipticSet/unraid-header-fix/issues" min="7.1.0" icon="header-fix.png">
   <CHANGES>
+###2026.11.06.1700
+- Make the UNRAID logo tappable on phones with the Unraid 7.1 to 7.3 header, where the server name box covered it. Custom CSS is no longer needed for this.
+
 ###2026.10.26.1900
 - Show the plugin icon from the repository on the Plugins page and in Community Applications, instead of the generic wrench.
 
@@ -29,57 +32,61 @@
     <INLINE>set -euo pipefail
 scratch=$(mktemp -d /tmp/header-fix-install.XXXXXX)
 trap 'rm -rf -- "$scratch"' EXIT
-base64 -d &gt; "$scratch/unraid-header-fix-2026.10.26.1900-noarch-1.txz" &lt;&lt;'HEADER_FIX_PAYLOAD'
-/Td6WFoAAATm1rRGAgAhARYAAAB0L+Wj4E//CBZdADSbis4fvAUP9onbyKO5hKWNo4KTEEyxFFQd
+base64 -d &gt; "$scratch/unraid-header-fix-2026.11.06.1700-noarch-1.txz" &lt;&lt;'HEADER_FIX_PAYLOAD'
+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
-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
-AYlBAAGyEICgAQA7K43ZscRn+wIAAAAABFla
+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
 HEADER_FIX_PAYLOAD
-if ! printf '%s  %s\n' "2073d90e6883132b868c10bbc44909162681928a127d6363c52f382ac753d0d1" "$scratch/unraid-header-fix-2026.10.26.1900-noarch-1.txz" | sha256sum -c --status -; then
+if ! printf '%s  %s\n' "d0b6592e540c5952f7421fc26198368508f1da56a0f8edbb5bae6ed490b9e7c8" "$scratch/unraid-header-fix-2026.11.06.1700-noarch-1.txz" | sha256sum -c --status -; then
   echo 'Package checksum mismatch; the plugin file is incomplete or modified.' &gt;&amp;2
   exit 1
 fi
-upgradepkg --install-new --reinstall "$scratch/unraid-header-fix-2026.10.26.1900-noarch-1.txz"
-# Releases before 2026.10.26.1900 downloaded the package to the boot device.
+upgradepkg --install-new --reinstall "$scratch/unraid-header-fix-2026.11.06.1700-noarch-1.txz"
+# Releases before 2026.11.06.1700 downloaded the package to the boot device.
 rm -f /boot/config/plugins/header-fix/unraid-header-fix-*.txz
 echo ""
 echo "----------------------------------------------------"
 echo " WebGUI Header Link Fix has been installed."
-echo " Version: 2026.10.26.1900"
+echo " Version: 2026.11.06.1700"
 echo "----------------------------------------------------"
 echo ""
 </INLINE>

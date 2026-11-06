@@ -4,6 +4,10 @@ const page = fs.readFileSync('src/usr/local/emhttp/plugins/header-fix/HeaderFix.
 assert.match(page, /^Menu="Buttons:299"\nLink="nav-user"\n---\n<script>\n/);
 const script = page.split('<script>\n')[1].split('</script>')[0];
 
+// The legacy header on phones: taps on the logo must pass through #UserProfile.
+const style = page.split('<style>\n')[1].split('</style>')[0].replace(/\/\*[\s\S]*?\*\//g, '');
+assert.match(style, /@media \(max-width: 767px\) \{\s*#header #UserProfile \{\s*pointer-events: none;\s*\}\s*#header #UserProfile > \* \{\s*pointer-events: auto;\s*\}\s*\}/);
+
 const link = href => ({
   href, attrs: { target: '_blank', rel: 'noopener' },
   removeAttribute(name) { delete this.attrs[name]; },
@@ -44,4 +48,4 @@ frames.shift()();
 assert.deepEqual([mounted.href, mounted.attrs], ['/', {}]);
 observerCallback();
 assert.equal(frames.length, 1, 'A new frame is scheduled after the previous one ran');
-console.log('Header logo links are rewritten on load and after mount; other links stay unchanged.');
+console.log('Header logo links are rewritten on load and after mount; other links stay unchanged; the phone tap fix is in place.');
