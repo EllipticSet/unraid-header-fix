@@ -26,7 +26,7 @@ The plugin has no settings, runs no background service and makes no network requ
 | Unraid | Header |
 | --- | --- |
 | 7.1 to 7.3 | Legacy header (`unraid-header-os-version`) |
-| 7.4 | Unified header (`unraid-header`), including the placeholder shown while it loads |
+| 7.4 (tested on 7.4.0) | Unified header (`unraid-header`), including the placeholder shown while it loads |
 
 Only links that point exactly to the unraid.net home page are changed. Other unraid.net links in the header, such as documentation or account links, keep working as before.
 
