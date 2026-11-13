@@ -32,7 +32,7 @@ Only links that point exactly to the unraid.net home page are changed. Other unr
 
 ## Installation
 
-Open **Apps** in Unraid, search for **WebGUI Header Link Fix** and select **Install**.
+The plugin is available in [Community Applications](https://unraid.net/community/apps?q=WebGUI+Header+Link+Fix). In Unraid, open **Apps**, search for **WebGUI Header Link Fix** and select **Install**. The **Apps** tab requires the Community Applications plugin.
 
 ### Direct installation
 
@@ -46,7 +46,7 @@ The plugin file contains the package, so installation and updates do not downloa
 
 ### Moving from the original plugin
 
-The plugin keeps the original name (`header-fix`) and version scheme, so it replaces the original plugin directly. Once the original plugin redirects its updates here, existing installations update from **Plugins** without reinstalling.
+The plugin keeps the original name (`header-fix`) and version scheme, so it replaces the original plugin directly. The original listing has been removed from Community Applications. Once the original plugin redirects its updates here, existing installations update from **Plugins** without reinstalling. Until then, install this plugin with the direct installation URL above: it updates the original plugin in place, with no need to remove it first.
 
 ## Removal
 
