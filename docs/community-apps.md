@@ -1,6 +1,8 @@
 # Community Applications
 
-The plugin is listed in Community Applications as **WebGUI Header Link Fix**. The listing was approved on 2 November 2026 and replaces the original one by Derek Kaser, who agreed to redirect updates from the original plugin to this repository and to remove the original listing.
+The plugin is listed in Community Applications as **WebGUI Header Link Fix**, in the **Tools / Utilities** and **Plugins** categories. The repository was approved on 2 November 2026 and the plugin appeared in the catalogue on 13 November 2026. It replaces the original listing by Derek Kaser, which is no longer in the catalogue. He agreed to redirect updates from the original plugin to this repository.
+
+To install it, open **Apps** in Unraid, search for **WebGUI Header Link Fix** and select **Install**. The listing can also be found in the [Community Applications web catalogue](https://unraid.net/community/apps?q=WebGUI+Header+Link+Fix).
 
 Direct installation remains available through **Plugins → Install Plugin** using:
 
